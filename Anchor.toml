@@ -1,0 +1,23 @@
+[features]
+seeds = false
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "/Users/sundeepcharanramkumar/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+[programs.localnet]
+castle_mango_wrapper = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+
+[[test.genesis]]
+address = "4skJ85cdxQAFVKbcGgfun8iZPL7BadVYXG3kGEGkufqA"
+program = "deps/mango.so"
+
+[[test.genesis]]
+address = "DESVgJVGajEgKGXhb6XmqDHGz3VjdgP7rEVESBgxmroY"
+program = "deps/serum_dex.so"
